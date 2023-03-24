@@ -51,7 +51,7 @@
 }
 
 .smbg{
-    background-color:#fff;
+    background-color:#4b9d8c;
     background-image:linear-gradient(rgba(110, 69, 143, 0.1), #fff);
     background-image:-webkit-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
     background-image:-moz-linear-gradient(rgba(110, 69, 143, 0.1), #fff);
@@ -60,7 +60,7 @@
 }
 
 .curdbgpro{
-    background-color:#fff;
+    background-color: #4b9d8c;
     background-image:linear-gradient(rgba(10, 77, 123, 0.1), #fff);
     background-image:-webkit-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
     background-image:-moz-linear-gradient(rgba(10, 77, 123, 0.1), #fff);
@@ -73,7 +73,7 @@
 }
 
 .mlkpro{
-    color:#636362;
+    color:#000000;
     font-size:22px;
     line-height:22px;
     margin-bottom:15px;
@@ -104,4 +104,36 @@
     color: #fff;
     margin: inherit;
     border-bottom: #fff solid 1px;
+}
+
+#ini{
+    text-align: center; 
+}
+
+
+body{
+    background-color: rgb(160, 243, 215); 
+}
+
+.text-center{
+    color: #000000;
+    font-size: 20px;
+}
+
+.mt-3{
+    background-color: #ffffff;
+}
+
+#bg-success{
+    background-color: #ffffff;
+    
+}
+
+#contenedor{
+    border-color: #080808;
+    border-radius: 100px;
+}
+
+#fondo{
+    background: url(../images/banner1.png);
 }

@@ -4,12 +4,13 @@
 
 {% block main-content %}
 
-    <div class="container">
+    <div class="container" id="contenedor">
         <div class="row my-3">
             <div class="col-sm-6 offset-sm-3">
-                <h3> Registro de cliente</h3>
-                <hr>
-
+                <h3 id="ini"> Registro de cliente</h3>
+                <center>
+                    <img src="{% static 'app/images/icono1.png' %}" alt="logo-Tecnologia Jf" width="70" height="70" >
+                </center>
                 <form action="" method="post" novalidate class="shadow p-5">
                     {% csrf_token %}
                     {% for fm in form %}
