@@ -1,0 +1,55 @@
+/* Estilos personalizados para el formulario */
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #eee;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #4c72b0;
+    border-color: #4c72b0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #265197;
+    border-color: #265197;
+}
+
+.alert {
+    border-radius: 5px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alert-danger p {
+    margin: 0;
+}

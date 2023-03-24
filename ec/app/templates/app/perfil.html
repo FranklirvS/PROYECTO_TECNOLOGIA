@@ -1,0 +1,45 @@
+{% extends "app/base.html" %} {% load static%} 
+{% block title %}Perfil{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+  <div class="row">
+    <h3 class="fw-bold">Bienvenido <span class="text-capitalize">{{request.user}}</span></h3>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-3">
+      <div class="list-group">
+        <a href="{% url 'profile' %}" class="list-group-item list-group-item-action active fw-bold rounded-0">
+          Perfil
+        </a>
+        <a href="{% url 'adress' %}" class="list-group-item list-group-item-action rounded-0">
+          Dirección
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <form action="" method="post" class="border p-4 rounded shadow">
+        {% csrf_token %}
+        {% for fm in form %}
+        <div class="form-group">
+          {{fm.label_tag}}
+          {{fm}}
+          <small class="form-text text-danger">{{fm.errors|striptags}}</small>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <p class="alert alert-danger my-3">{{error}}</p>
+        {% endfor %}
+        {% endif %}
+        {% if messages %}
+        {% for msg in messages %}
+        <div class="alert alert-{{msg.tags}} my-3" role="alert">{{msg}}</div>
+        {% endfor %}
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}

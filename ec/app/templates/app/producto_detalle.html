@@ -1,0 +1,41 @@
+{% extends "app/base.html" %}
+{% load static%}
+{% block title %}Detalle del producto{% endblock title %}
+
+{% block main-content %}
+
+    <div class="container">
+        <div class="row flex justify-content-between">
+            <div class="img2 col-lg-5 mt-5">
+                <img src="{{product.producto_imagen.url}}"
+                class="image col-xs-6 col-sm-12 col-lg-12 mt3 
+                text-sm-center w-100 h-75" alt="">
+            </div>
+
+            <div class="productdetail col-lg-5">
+                <h1 style="font-family: Georgia; font-size: 50px;">
+                    {{product.title}}
+                </h1>
+                <h5>USD.{{product.precio_descontado}}/-</h5>
+                <small class="text-decoration-line-through text-muted fs-5">
+                <del>USD.{{product.precio_venta}}</small></del>
+                <br><br><h4>Características del producto</h4>
+
+                <ul clas="fs-5" style="font-family: Rajdhani;">
+                    <li>{{product.descripcion}}</li>
+                </ul>
+
+                <div class="buttons row flex" style="font-family: Rajdhani;">
+                    <button type="submit" class="d-grid gap-2 btn1 btn btn-danger p-1 m-1
+                    btn-lg text-decoration-none text-white">Agregar al Carrito</button>
+                    <div class="btn btn-success p-1 m-1 btn-lg">
+                        <a href="#" class="text-decoration-none text-white">Comprar Ahora</a>
+                    </div>
+                </di>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock main-content %}
