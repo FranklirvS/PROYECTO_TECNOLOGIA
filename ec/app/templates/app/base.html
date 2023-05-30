@@ -100,7 +100,13 @@
             <center>
               <h1 style="font-family: 'Times New Roman', Times, serif;font-weight: bold;">Plastico</h1>
             </center>
-          {% endif %}   
+          {% endif %}
+          <li class="nav-item mx-2">
+            <a  href="{% url 'login' %}" class="nav-link text-dark">Inicio sesion</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="{% url 'Registroclientes' %}" class="nav-link text-dark">Resgistrarse</a>
+          </li>   
         </ul>  
 
       </div>
