@@ -3,24 +3,25 @@
 {% block title %}Login{% endblock title %}
 
 {% block main-content %}
-
+<br>
     <div class="container">
         <div class="row my-3">
             <div class ="col-sm-6 offset-sm-3">
-                <h3 id="ini">Inicio de Sesion</h3>
-                <center>
-                    <img src="{% static 'app/images/icono1.png' %}" alt="logo-Tecnologia Jf" width="70" height="70" >
-                </center>
-                <form action="" method = "post" novalidate class="shadow p-5">
+                
+                
+                <form action="" method = "post" novalidate class="shadow p-5 border border-dark ">
+                    <h3 id="ini">Inicio de Sesion</h3><br>
                     {% csrf_token %}
                     {% for fm in form %}
-                        {{fm.label_tag}} {{fm}} <small class="text-danger"> {{fm.errors|striptags}}</smal1> <br>
+                        {{fm.label_tag}} {{fm}} <small class="text-dark"> {{fm.errors|striptags}}</smal1> 
                     {% endfor %}
                     
-                    <small><a href="{% url 'password_reset' %}"> Has olvidado tu contraseña ?</a></small><br>
-                    <input type="submit" class="btn btn-primary mt-4" value="Login">
-                    <div class="text - center text-primary fw-bold">
-                        <small> Nuevo usuario? <a href="{% url 'Registroclientes' %}" class="text -danger">Crea una cuenta</a> </small>
+                    <div class="d-grid gap-2">
+                        <input type="submit" class="btn btn-success mt-5  " value="Iniciar Seccion">
+                    </div>
+                    <br>
+                    <div class="text-center text-primary">
+                        <small><a href="{% url 'Registroclientes' %}" class="text-dark fs-5">Crear una cuenta</a> </small>
                     </div>
                     
                     {% if form.non_field_errors %}

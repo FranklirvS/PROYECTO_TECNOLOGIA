@@ -112,7 +112,7 @@
 
 
 body{
-    background-color: rgb(160, 243, 215); 
+    background: url(../images/banners/1.png) no-repeat center center fixed;
 }
 
 .text-center{
